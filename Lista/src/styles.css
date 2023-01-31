@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+     background-image: url(../src/assets/bg8.jpg);
+     background-repeat: no-repeat;
+     background-size: cover; 
+     background-position: center;
+     background-position-y: -26rem;
+}
+
+@media only screen and (max-width: 1240px) {
+     body {
+       background-image: url(../src/assets/bg9.jpg);
+       background-position: center;
+       background-position-y: 3rem;
+   }
+}
+
+
+@media only screen and (max-width: 1150px) {
+     body {
+       background-image: url(../src/assets/bg9.jpg);
+       background-position: center;
+       background-position-y: 8rem;
+   }
+}
+
+
+@media only screen and (max-width: 1000px) {
+     body {
+       background-image: url(../src/assets/bg9.jpg);
+       background-position: center;
+       background-position-y: 13rem;
+   }
+}
+
+
+@media only screen and (max-width: 900px) {
+     body {
+       background-image: url(../src/assets/bg9.jpg);
+       background-position: center;
+       background-position-y: 15rem;
+   }
+}

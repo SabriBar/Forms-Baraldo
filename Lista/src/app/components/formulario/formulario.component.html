@@ -1,0 +1,53 @@
+<div class="flex-container">
+
+
+    <div class="titulo">
+        <h2>Bienvenido</h2>
+        <h1>Ingreso a Gestión de Alumnos</h1>
+    </div>
+
+    <div class="form">
+
+        <form [formGroup]="formularioLogin" (ngSubmit)="login()">
+            <div class="form-group">
+                <input formControlName="correo" type="email" class="form-control input-lg" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Ingresa su email">
+                <div class="valido" *ngIf="formularioLogin.controls['correo'].valid">Campo correcto</div>
+                <div class="invalido"
+                    *ngIf="formularioLogin.controls['correo'].dirty && formularioLogin.controls['correo'].errors?.['required']">
+                    No puede estar
+                    vacío</div>
+                <div class="invalido"
+                    *ngIf="formularioLogin.controls['correo'].dirty && formularioLogin.controls['correo'].errors?.['pattern']">
+                    El formato es
+                    incorrecto</div>
+            </div>
+            <div class="form-group">
+                <input formControlName="contra" type="password" class="form-control" id="exampleInputPassword1"
+                    placeholder="Ingrese su contraseña">
+                <div class="valido" *ngIf="formularioLogin.controls['contra'].valid">Campo correcto</div>
+                <div class="invalido"
+                    *ngIf="formularioLogin.controls['contra'].dirty && formularioLogin.controls['contra'].errors?.['required']">
+                    No puede estar
+                    vacío</div>
+                <div class="invalido"
+                    *ngIf="formularioLogin.controls['contra'].dirty && formularioLogin.controls['contra'].errors?.['minlength']">
+                    La contraseña debe contener entre 8-16 caracteres</div>
+                    <div class="invalido"
+                    *ngIf="formularioLogin.controls['contra'].dirty && formularioLogin.controls['contra'].errors?.['maxlength']">
+                    La contraseña debe contener entre 8-16 caracteres</div>
+            </div>
+
+            <div class="sub-container">
+                <div class="bt">
+                    <button type="submit" class="btn btn-primary" [disabled]="formularioLogin.invalid">Enviar</button>
+                </div>
+                <div class="form-check">
+                    <input formControlName="recuerdame" type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
